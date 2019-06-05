@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="test1" style="display: block;">
+		<h1 style="">ОЧКИ. У ВАС ТОЛЬКО ОДНА ПОПЫТКА.</h1>
+		<h1  style="" class="ochki-test1"></h1>
+		<h1 class="vopros" style="text-align: center; visibility: hidden;">Где крокодил?</h1>
+		<div style="display: flex; margin-left: 300px; margin-bottom: 10px;">
+			<div class="img1" style="background-image: url(img/Antilop.jpg); height: 200px; width: 300px; background-size: 100% 100%;"></div>
+			<div class="img2" style="background-image: url(img/elephant.jpg); height: 200px; width: 300px; background-size: 100% 100%; margin-left: 10px;"></div>
+			<div class="img3" style="background-image: url(img/begemot.jpg); height: 200px; width: 300px; background-size: 100% 100%; margin-left: 10px;"></div>
+		</div>
+		<div style="display: flex; margin-left: 300px; margin-bottom: 10px;">
+			<div class="img4" style="background-image: url(img/giena.jpg); height: 200px; width: 300px; background-size: 100% 100%;"></div>
+			<div class="img5" style="background-image: url(img/korova.jpg); height: 200px; width: 300px; background-size: 100% 100%;  margin-left: 10px;"></div>
+			<div class="img6" style="background-image: url(img/jiraf.jpg); height: 200px; width: 300px; background-size: 100% 100%; margin-left: 10px;"></div>
+		</div>
+		<div style="display: flex; margin-left: 300px;">
+			<div class="img7" style="background-image: url(img/nosorog.jpg); height: 200px; width: 300px; background-size: 100% 100%;"></div>
+			<div class="img8" style="background-image: url(img/lion.jpg); height: 200px; width: 300px; background-size: 100% 100%;  margin-left: 10px;"></div>
+			<div class="img9" style="background-image: url(img/zebra.jpg); height: 200px; width: 300px; background-size: 100% 100%; margin-left: 10px;"></div>
+		</div>
+	</div>
+
+	<div class="test2" style="display: none;">
+		<h1 style="">ОЧКИ. У ВАС ТОЛЬКО ОДНА ПОПЫТКА.</h1>
+		<h1  style="" class="ochki-test2"></h1>
+		<h1 class="vopros2" style="text-align: center; visibility: hidden;">Где кледенец?</h1>
+		<div style="display: flex; margin-left: 300px; margin-bottom: 10px;">
+			<div class="img10" style="background-image: url(img/Spy.jpg); height: 200px; width: 300px; background-size: 100% 100%;"></div>
+			<div class="img11" style="background-image: url(img/Medic.jpg); height: 200px; width: 300px; background-size: 100% 100%; margin-left: 10px;"></div>
+			<div class="img12" style="background-image: url(img/Engi.jpg); height: 200px; width: 300px; background-size: 100% 100%; margin-left: 10px;"></div>
+		</div>
+		<div style="display: flex; margin-left: 300px; margin-bottom: 10px;">
+			<div class="img13" style="background-image: url(img/Heavy.jpg); height: 200px; width: 300px; background-size: 100% 100%;"></div>
+			<div class="img14" style="background-image: url(img/Pyro.jpg); height: 200px; width: 300px; background-size: 100% 100%;  margin-left: 10px;"></div>
+			<div class="img15" style="background-image: url(img/Sniper.jpg); height: 200px; width: 300px; background-size: 100% 100%; margin-left: 10px;"></div>
+		</div>
+		<div style="display: flex; margin-left: 300px;">
+			<div class="img16" style="background-image: url(img/Demoman.jpg); height: 200px; width: 300px; background-size: 100% 100%;"></div>
+			<div class="img17" style="background-image: url(img/Scout.jpg); height: 200px; width: 300px; background-size: 100% 100%;  margin-left: 10px;"></div>
+			<div class="img18" style="background-image: url(img/Soldier.jpg); height: 200px; width: 300px; background-size: 100% 100%; margin-left: 10px;"></div>
+		</div>
+	</div>
+
+
+
+
+
+
+<script>
+	let ochki1 = 100;
+	document.querySelector(".ochki-test1").innerHTML = ochki1
+	let time1 = function(){
+		document.querySelector(".vopros").style.visibility = "visible"
+		document.querySelector(".img1").style.background = "black"
+		document.querySelector(".img2").style.background = "black"
+		document.querySelector(".img3").style.background = "black"
+		document.querySelector(".img4").style.background = "black"
+		document.querySelector(".img5").style.background = "black"
+		document.querySelector(".img6").style.background = "black"
+		document.querySelector(".img7").style.background = "black"
+		document.querySelector(".img8").style.background = "black"
+		document.querySelector(".img9").style.background = "black"
+	}
+	//1
+
+	document.querySelector(".img1").onclick = function(){
+			ochki1 = ochki1 - 100
+			document.querySelector(".ochki-test1").innerHTML = ochki1
+			alert("НЕ ПРАВИЛЬНО!")
+			document.querySelector(".img1").style.backgroundImage = "url(img/Antilop.jpg)"
+			document.querySelector(".img1").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img2").onclick = function(){
+			alert("НЕ ПРАВИЛЬНО!")
+			ochki1 = ochki1 - 100
+			document.querySelector(".ochki-test1").innerHTML = ochki1
+			document.querySelector(".img2").style.backgroundImage = "url(img/elephant.jpg)"
+			document.querySelector(".img2").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img3").onclick = function(){
+			alert("ПРАВИЛЬНО! ТЫ ГЕНИЙ!")
+			document.querySelector(".img3").style.backgroundImage = "url(img/begemot.jpg)"
+			document.querySelector(".img3").style.backgroundSize = "100% 100%"
+			document.querySelector(".test1").style.display = "none"
+			document.querySelector(".test2").style.display = "block"
+			setTimeout(time2,4000)
+		}
+
+	document.querySelector(".img4").onclick = function(){
+			alert("НЕ ПРАВИЛЬНО!")
+			ochki1 = ochki1 - 100
+			document.querySelector(".ochki-test1").innerHTML = ochki1
+			document.querySelector(".img4").style.backgroundImage = "url(img/giena.jpg)"
+			document.querySelector(".img4").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img5").onclick = function(){
+			alert("НЕ ПРАВИЛЬНО!")
+			ochki1 = ochki1 - 100
+			document.querySelector(".ochki-test1").innerHTML = ochki1
+			document.querySelector(".img5").style.backgroundImage = "url(img/korova.jpg)"
+			document.querySelector(".img5").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img6").onclick = function(){
+			alert("НЕ ПРАВИЛЬНО!")
+			ochki1 = ochki1 - 100
+			document.querySelector(".ochki-test1").innerHTML = ochki1
+			document.querySelector(".img6").style.backgroundImage = "url(img/jiraf.jpg)"
+			document.querySelector(".img6").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img7").onclick = function(){
+			alert("НЕ ПРАВИЛЬНО!")
+			ochki1 = ochki1 - 100
+			document.querySelector(".ochki-test1").innerHTML = ochki1
+			document.querySelector(".img7").style.backgroundImage = "url(img/nosorog.jpg)"
+			document.querySelector(".img7").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img8").onclick = function(){
+			alert("НЕ ПРАВИЛЬНО!")
+			ochki1 = ochki1 - 100
+			document.querySelector(".ochki-test1").innerHTML = ochki1
+			document.querySelector(".img8").style.backgroundImage = "url(img/lion.jpg)"
+			document.querySelector(".img8").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img9").onclick = function(){
+			alert("НЕ ПРАВИЛЬНО!")
+			ochki1 = ochki1 - 100
+			document.querySelector(".ochki-test1").innerHTML = ochki1
+			document.querySelector(".img9").style.backgroundImage = "url(img/zebra.jpg)"
+			document.querySelector(".img9").style.backgroundSize = "100% 100%"
+		}
+
+	setTimeout(time1,4000)
+
+	//2
+	let ochki2 = 100;
+	document.querySelector(".ochki-test2").innerHTML = ochki2
+	let time2 = function(){
+		document.querySelector(".vopros2").style.visibility = "visible"
+		document.querySelector(".img10").style.background = "black"
+		document.querySelector(".img11").style.background = "black"
+		document.querySelector(".img12").style.background = "black"
+		document.querySelector(".img13").style.background = "black"
+		document.querySelector(".img14").style.background = "black"
+		document.querySelector(".img15").style.background = "black"
+		document.querySelector(".img16").style.background = "black"
+		document.querySelector(".img17").style.background = "black"
+		document.querySelector(".img18").style.background = "black"
+	}
+
+	document.querySelector(".img10").onclick = function(){
+			ochki2 = ochki2 - 100
+			document.querySelector(".ochki-test2").innerHTML = ochki2
+			alert("НЕ ПРАВИЛЬНО!")
+			document.querySelector(".img10").style.backgroundImage = "url(img/Spy.jpg)"
+			document.querySelector(".img10").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img11").onclick = function(){
+			ochki2 = ochki2 - 100
+			document.querySelector(".ochki-test2").innerHTML = ochki2
+			alert("НЕ ПРАВИЛЬНО!")
+			document.querySelector(".img11").style.backgroundImage = "url(img/Medic.jpg)"
+			document.querySelector(".img11").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img12").onclick = function(){
+			ochki2 = ochki2 - 100
+			document.querySelector(".ochki-test2").innerHTML = ochki2
+			alert("НЕ ПРАВИЛЬНО!")
+			document.querySelector(".img12").style.backgroundImage = "url(img/Engi.jpg)"
+			document.querySelector(".img12").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img13").onclick = function(){
+			ochki2 = ochki2 - 100
+			document.querySelector(".ochki-test2").innerHTML = ochki2
+			alert("НЕ ПРАВИЛЬНО!")
+			document.querySelector(".img13").style.backgroundImage = "url(img/Heavy.jpg)"
+			document.querySelector(".img13").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img14").onclick = function(){
+			alert("ПРАВИЛЬНО! ТЫ ГЕНИЙ!")
+			document.querySelector(".img14").style.backgroundImage = "url(img/Pyro.jpg)"
+			document.querySelector(".img14").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img15").onclick = function(){
+			ochki2 = ochki2 - 100
+			document.querySelector(".ochki-test2").innerHTML = ochki2
+			alert("НЕ ПРАВИЛЬНО!")
+			document.querySelector(".img15").style.backgroundImage = "url(img/Sniper.jpg)"
+			document.querySelector(".img15").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img16").onclick = function(){
+			ochki2 = ochki2 - 100
+			document.querySelector(".ochki-test2").innerHTML = ochki2
+			alert("НЕ ПРАВИЛЬНО!")
+			document.querySelector(".img16").style.backgroundImage = "url(img/Demoman.jpg)"
+			document.querySelector(".img16").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img17").onclick = function(){
+			ochki2 = ochki2 - 100
+			document.querySelector(".ochki-test2").innerHTML = ochki2
+			alert("НЕ ПРАВИЛЬНО!")
+			document.querySelector(".img17").style.backgroundImage = "url(img/Scout.jpg)"
+			document.querySelector(".img17").style.backgroundSize = "100% 100%"
+		}
+
+	document.querySelector(".img18").onclick = function(){
+			ochki2 = ochki2 - 100
+			document.querySelector(".ochki-test2").innerHTML = ochki2
+			alert("НЕ ПРАВИЛЬНО!")
+			document.querySelector(".img18").style.backgroundImage = "url(img/Soldier.jpg)"
+			document.querySelector(".img18").style.backgroundSize = "100% 100%"
+		}
+
+	
+
+
+
+</script>	
+</body>
+</html>
+//научись за собой закрывать//
